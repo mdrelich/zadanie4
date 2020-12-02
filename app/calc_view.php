@@ -14,8 +14,8 @@
 </br>
     <legend>Wpisz wszystkie potrzebne parametry żeby obliczyć swój kredyt</legend>
     <br></br>
-<!--<form action="--><?php //print(_APP_URL);?><!--/app/calc.php" method="post" class="pure-form pure-form-stacked">-->
-<form action="<?php print(_APP_URL);?>/index.php" method="post" class="pure-form pure-form-stacked">
+<form action="<?php print(_APP_URL);?>/app/calc.php" method="post" class="pure-form pure-form-stacked">
+<!--<form action="--><?php //print(_APP_URL);?><!--/index.php" method="post" class="pure-form pure-form-stacked">-->
 	<label for="id_x">Kwota </label>
 	<input id="id_x" type="text" name="x" value="<?php out($x) ?>" /><br />
 	<label for="id_y">Na ile kredyt(w latach) </label>
@@ -24,7 +24,9 @@
     <input id="id_z" type="text" name="z" value="<?php out($z) ?>" /><br />
     <input type="submit" value="Oblicz" />
 </form>
-
+    <br><form action="<?php print(_APP_URL);?>/index.php" method="post" class="pure-form pure-form-stacked">
+        <input type="submit" value="Strona Główna" />
+    </form>
 <?php
 //wyświeltenie listy błędów, jeśli istnieją
 if (isset($messages)) {
